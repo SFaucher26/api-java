@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -51,5 +52,11 @@ public class ProductController {
         return productRepository.save(product);
     }
 
+    @DeleteMapping("/{productId}")
+    public void deleteProduct(@PathVariable("productId") Integer productId) {
+        Product product = productRepository.findById(productId)
+                .orElseThrow(() -> new ResourceNotFoundException("Product not found with id "));
+        productRepository.delete(product);
+    }
 
 }

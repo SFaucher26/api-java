@@ -1,10 +1,10 @@
 meta {
-  name: updateProduct
+  name: deleteProduct
   type: http
-  seq: 10
+  seq: 11
 }
 
-put {
+delete {
   url: http://localhost:8080/products/3
   body: json
   auth: none
@@ -16,9 +16,4 @@ body:json {
       "name": "Nouvel ordinateur",
       "price": 99.99
   }
-}
-
-body:multipart-form {
-  name: nouveau produit
-  price: 25
 }
