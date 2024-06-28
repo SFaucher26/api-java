@@ -1,0 +1,27 @@
+meta {
+  name: register
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:8080/register
+  body: multipartForm
+  auth: none
+}
+
+body:json {
+  {
+    "username": "sandrine1",
+    "password": "azerty1234",
+    "passwordConfirm" : "azerty1234",
+    "email" : "sandrine1@mail.com"
+  }
+}
+
+body:multipart-form {
+  username: Sandrine4
+  password: azerty34
+  passwordConfirm: azerty34
+  email: sandrine34@mail.com
+}

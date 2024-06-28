@@ -1,0 +1,31 @@
+meta {
+  name: createUser
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8080/api/users/users
+  body: multipartForm
+  auth: none
+}
+
+headers {
+  content-type: application/json
+}
+
+body:json {
+  {
+    "username": "boob",
+    "name": "bouba",
+    "email": "bouba36@example.com",
+    "password": "securepassword"
+  }
+}
+
+body:multipart-form {
+  username: sfaucher2
+  name: sfauch
+  email: sandrinette@mail.com
+  password: azerty26
+}
