@@ -1,7 +1,7 @@
 # Shop Springboot
 
 ## Installation
-ouvrir api-java 
+#ouvrir api-java 
 ./ gradlew bootrun
 
 ### Understanding the class diagram :

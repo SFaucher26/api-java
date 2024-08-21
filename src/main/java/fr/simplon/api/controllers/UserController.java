@@ -44,9 +44,8 @@ public class UserController {
         return userRepository.save(user);
     }
     @GetMapping("/{userId}")
-    public Optional<User> getAllUsers(@PathVariable("userId") Integer userId) {
+    public Optional<User> getUserById(@PathVariable("userId") Integer userId) {
         return userRepository.findById(userId);
     }
-
 
 }
